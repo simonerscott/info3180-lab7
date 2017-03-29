@@ -5,7 +5,7 @@ import urlparse
 url = "https://www.walmart.com/ip/54649026"
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "html.parser")
-urlList = []
+urlList = { "error": null, "message": "Successful", "thumbnails": [] }
 
 
 def getUrl():
@@ -30,7 +30,7 @@ def getUrl():
     
     
     for img in soup.findAll('img'):
-        urlList = [img.get('src')] + urlList
+        urlList = getUrl["thumbnails"].append({ [img.get('src')] + urlList })
     return urlList
 
 
