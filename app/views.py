@@ -26,10 +26,18 @@ def home():
     
     
 @app.route("/api/thumbnails", methods = ["GET"])
-def thumbnails():
-    return jsonify(getUrl())
+def getUrlData():
+    urlData = {"error": None, "message": "Successful", "thumbnails": getUrl()}
+    return jsonify(urlData)
     
 
+
+
+@app.route()
+def thumbnails():
+    return ''
+    
+    
 
 ###
 # The functions below should be applicable to all Flask apps.
