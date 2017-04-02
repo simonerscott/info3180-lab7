@@ -33,9 +33,9 @@ def getUrlData():
 
 
 
-@app.route()
+@app.route("/thumbnails/view")
 def thumbnails():
-    return ''
+    return render_template("thumbnails.html")
     
     
 

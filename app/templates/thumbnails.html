@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<h1 class = "page-header"> Thumbnails </h1>
+<p class = "lead"> Below are the Image of the Thumbnails </p>
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    {% raw %}
+    
+     <div>
+         <img ng-repeat = "img in urlData track by $index" ng-src = "{{ img }}">
+     </div>
+     
+     {% endraw %}
+     
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="{{ url_for('static', filename="js/angular.min.js") }}" charset="utf-8"></script>
+<script src="{{ url_for('static', filename="js/app.js") }}" charset="utf-8"></script>
+{% endblock %}

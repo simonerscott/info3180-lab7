@@ -5,7 +5,7 @@ import urlparse
 url = "https://www.walmart.com/ip/54649026"
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "html.parser")
-urlList = { "thumbnails": [] }
+urlList = {"thumbnails": [] }
 
 
 def getUrl():
